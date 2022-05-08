@@ -38,10 +38,13 @@ const CalcForm = () => {
 
   const calculateFinalGrade = () => {
     let isValid = true;
-    setErrors(validateGrades(grades));
+    const err = validateGrades(grades);
+    setErrors(err);
 
-    for (const res in validateGrades(grades)) {
-      if (!res) isValid = false;
+    for (const [key, value] of Object.entries(err)) {
+      console.log(value);
+      if (!value) isValid = false;
+      setTotal(0);
     }
 
     if (isValid) {
@@ -232,14 +235,16 @@ const CalcForm = () => {
             <span className="text">What's my classification?</span>
           </button>
         </div>
-        <div className="calc-form-result">
-          <div className="calc-form-result-class">
-            <RiHonourFill size={"30px"} color={"#FFF"} /> {classification}
+        {total && (
+          <div className="calc-form-result">
+            <div className="calc-form-result-class">
+              <RiHonourFill size={"30px"} color={"#FFF"} /> {classification}
+            </div>
+            <div className="calc-form-result-grade">
+              <p>Grade:</p> {total}
+            </div>
           </div>
-          <div className="calc-form-result-grade">
-            <p>Grade:</p> {total}
-          </div>
-        </div>
+        )}
       </div>
     </>
   );
