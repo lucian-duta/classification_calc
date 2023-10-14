@@ -15,7 +15,6 @@ export const calculateClassification = (
   let level6Grades: number[] = [];
 
   for (const key in data) {
-    // Assert that the key is a valid key of the data type
     const gradeKey = key as keyof typeof data;
 
     if (gradeKey.startsWith("lv5")) {
@@ -25,10 +24,12 @@ export const calculateClassification = (
     }
   }
 
-  // Sort the arrays in ascending order
-  level5Grades = level5Grades.sort((a, b) => a - b);
-  level6Grades = level6Grades.sort((a, b) => a - b);
+  // Sort the arrays in descending order
+  level6Grades = level6Grades.sort((a, b) => b - a);
 
+  console.log("level5Grades", level5Grades);
+  console.log("level6Grades", level6Grades);
+  // Calculate components
   const mainComponent =
     (level6Grades[0] * 20 +
       level6Grades[1] * 20 +
@@ -36,36 +37,48 @@ export const calculateClassification = (
       data.dissertation.grade * 40) /
     100;
 
-  const secondaryComponent =
-    (level6Grades[3] * 20 +
-      level5Grades[0] * 20 +
-      level5Grades[1] * 20 +
-      level5Grades[2] * 20) /
-    80;
+  let secondaryComponentGrades = level5Grades;
 
-  const finalGrade = (mainComponent * 80 + secondaryComponent * 20) / 100;
+  secondaryComponentGrades.push(level6Grades[3]);
+
+  secondaryComponentGrades = secondaryComponentGrades.sort((a, b) => b - a);
+
+  console.log("secondaryComponentGrades", secondaryComponentGrades);
+
+  const secondaryComponent =
+    (secondaryComponentGrades[0] * 20 +
+      secondaryComponentGrades[1] * 20 +
+      secondaryComponentGrades[2] * 20 +
+      secondaryComponentGrades[3] * 20) /
+    100;
+
+  let finalGrade = (mainComponent * 80 + secondaryComponent * 20) / 100;
+
+  finalGrade = Math.round(finalGrade);
+
+  console.log(mainComponent + secondaryComponent);
 
   if (finalGrade >= 70) {
     return {
       classification: "First Class Honours (1:1)",
-      grade: Math.round(finalGrade),
+      grade: finalGrade,
     };
   } else if (finalGrade >= 60) {
     return {
-      classification: "Second Class Honours",
+      classification: "Second Class Honours,",
       grade: Math.round(finalGrade),
       division: "First Division (2:1)",
     };
   } else if (finalGrade >= 50) {
     return {
-      classification: "Second Class Honours",
-      grade: Math.round(finalGrade),
+      classification: "Second Class Honours,",
+      grade: finalGrade,
       division: "Second Division (2:2)",
     };
   } else if (finalGrade >= 40) {
     return {
       classification: "Third Class Honours",
-      grade: Math.round(finalGrade),
+      grade: finalGrade,
     };
   } else {
     return { classification: "FAILED", grade: Math.round(finalGrade) };
