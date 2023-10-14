@@ -102,7 +102,7 @@ const CalcForm = () => {
     <>
       <div className="calc-form">
         <div className="calc-form-title">
-          <h1>Classification calculator v2</h1>
+          <h1>Classification calculator</h1>
         </div>
         <div className="calc-form-content">
           <div className="grades-container">
