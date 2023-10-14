@@ -57,12 +57,12 @@ const InfoAccordion = () => {
           <p className="mt-5 text-sm">
             Classification criteria sourced from "
             <a
-              href="https://uel.ac.uk/sites/default/files/part-3---academic-regulations-level-3-4-5-and-7.pdf"
+              href="https://uel.ac.uk/sites/default/files/part-3---academic-regulations.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="underline text-neutral-600 hover:text-neutral-950"
             >
-              Part 3 Academic Regulations (Level 3, 4, 5 and 7)
+              Part 3 Academic Regulations
             </a>
             ". Courtesy of{" "}
             <a
