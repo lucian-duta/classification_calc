@@ -42,9 +42,15 @@ const Calculator = () => {
         <div className="flex-1 space-y-4 p-2 md:p-8 pt-6">
           <Card>
             <CardHeader className="flex  sm:flex-row items-stretch justify-between space-y-2">
-              <h2 className="text-2xl md:text-3xl text-neutral-800 font-bold tracking-tight ml-2 md:ml-5 ">
-                Classification Calculator
-              </h2>
+              <div className="ml-2">
+                <h2 className="text-2xl md:text-3xl text-neutral-800 font-bold tracking-tight ">
+                  Classification Calculator
+                </h2>
+                <p className="text-neutral-600 text-sm ">
+                  This calculator is based on the University of East London's
+                  classification scheme.
+                </p>
+              </div>
               {/* // TODO: Create a credit control system */}
               {/* <Toggle
                 variant="outline"
@@ -71,7 +77,7 @@ const Calculator = () => {
                       Grades at level 5
                     </span>
                   </CardHeader>
-                  <CardContent className="font-semibold text-neutral-700 ">
+                  <CardContent className="text-neutral-700 space-y-2">
                     <GradeField
                       control={form.control}
                       gradeName="lv5Grade1"
@@ -105,8 +111,12 @@ const Calculator = () => {
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader>Grades at level 6</CardHeader>
-                  <CardContent>
+                  <CardHeader>
+                    <span className="font-semibold text-neutral-600">
+                      Grades at level 6
+                    </span>
+                  </CardHeader>
+                  <CardContent className="space-y-2 text-neutral-700 ">
                     <GradeField
                       control={form.control}
                       gradeName="lv6Grade1"
@@ -130,7 +140,11 @@ const Calculator = () => {
                   </CardContent>
                   <Card className="m-2 md:m-4">
                     <CardHeader className="grid grid-cols-4 gap-10 pb-2">
-                      <span className="col-span-3">Dissertation grade</span>
+                      <span className="col-span-3">
+                        <span className="font-semibold text-neutral-600">
+                          Dissertation Grade{" "}
+                        </span>
+                      </span>
                       <span className="col-span-1">Credits</span>
                     </CardHeader>
                     <CardContent>
