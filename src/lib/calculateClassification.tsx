@@ -11,7 +11,7 @@ export const calculateClassification = (
   data: z.infer<typeof formSchema>
 ): CalcResult => {
   // Extract grades into level5 and level6 arrays based on their prefix
-  let level5Grades: number[] = [];
+  const level5Grades: number[] = [];
   let level6Grades: number[] = [];
 
   for (const key in data) {
