@@ -91,7 +91,7 @@ const CalcForm = () => {
       } else if (finalGrade >= 50) {
         setClassification("Second Class Honours, Second Division");
       } else if (finalGrade >= 40) {
-        setClassification("Third Class Honours");
+        setClassification("Third Class Honours!");
       } else {
         setClassification("FAILED");
       }
