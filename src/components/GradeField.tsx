@@ -77,6 +77,7 @@ const GradeField: React.FC<GradeFieldProps> = ({
             <FormControl>
               <Input
                 disabled={!editCredit ?? true}
+                className="min-w-[55px] px-2"
                 type="number"
                 min="20"
                 max="180"

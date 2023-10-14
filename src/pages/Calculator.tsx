@@ -191,7 +191,7 @@ const Calculator = () => {
                                   max="180"
                                   onChange={(e) => {
                                     field.onChange(
-                                      parseInt(e.target.value, 10)
+                                      parseInt(e.target.value, 10),
                                     ); // Ensure react-hook-form's onChange is called
                                   }}
                                   onBlur={field.onBlur}

@@ -7,8 +7,7 @@
   line-height: 1.5;
   font-weight: 400;
 
- 
-   background-color: #6dcbc8;
+  background-color: #6dcbc8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +19,9 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  transition:
+    max-height 0.5s ease-out,
+    opacity 0.5s ease-out;
 }
 
 /* This will handle the visible state */
@@ -28,5 +29,7 @@
   max-height: 1000px; /* This value can be adjusted depending on your needs. It should be larger than the actual expected height of the card. */
   opacity: 1;
   overflow: hidden;
-  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+  transition:
+    max-height 0.5s ease-in,
+    opacity 0.5s ease-in;
 }

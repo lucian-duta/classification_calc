@@ -7,7 +7,11 @@
   line-height: 1.5;
   font-weight: 400;
 
-  background-image: linear-gradient(to right, rgb(255, 228, 230), rgb(204, 251, 241));
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 228, 230),
+    rgb(204, 251, 241)
+  );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,4 +19,3 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
