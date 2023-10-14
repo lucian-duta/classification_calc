@@ -6,7 +6,7 @@ const gradeWithCreditSchema = z.object({
     .min(1, { message: "Grade is required." })
     .min(40, { message: "Module must be passed" })
     .max(100, { message: "Grade cannot be more than 100" })
-    .refine((value) => Number.isNaN(value), {
+    .refine((value) => !Number.isNaN(value), {
       message: "Grade is required",
     }),
 
