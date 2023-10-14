@@ -75,6 +75,32 @@ const InfoAccordion = () => {
             </a>
             .
           </p>
+
+          <p className="mt-2 text-sm text-neutral-600">
+            This is an Open Source Software (OSS) project. Anyone is welcome to
+            contribute! View the code and contribute on{" "}
+            <a
+              href="https://github.com/lucian-duta/classification_calc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-neutral-950"
+            >
+              GitHub
+            </a>
+            .
+          </p>
+          <p className="mt-5 text-sm text-neutral-600">
+            Tool developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/lucian-duta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-neutral-950"
+            >
+              Lucian Duta
+            </a>
+            .
+          </p>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
