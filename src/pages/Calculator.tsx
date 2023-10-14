@@ -14,8 +14,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { FcDiploma1 } from "react-icons/fc";
-import { FiUnlock } from "react-icons/fi";
-import { Toggle } from "@/components/ui/toggle";
+// import { FiUnlock } from "react-icons/fi";
+// import { Toggle } from "@/components/ui/toggle";
 import InfoAccordion from "@/components/InfoAcordion";
 import {
   CalcResult,
@@ -33,8 +33,7 @@ const Calculator = () => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
-    console.log(calculateClassification(values));
+
     setResult(calculateClassification(values));
   }
   return (
@@ -46,13 +45,14 @@ const Calculator = () => {
               <h2 className="text-2xl md:text-3xl text-neutral-800 font-bold tracking-tight ml-2 md:ml-5 ">
                 Classification Calculator
               </h2>
-              <Toggle
+              {/* // TODO: Create a credit control system */}
+              {/* <Toggle
                 variant="outline"
                 className="mr-2 flex-shrink  md:mr-5 space-x-2"
               >
                 <FiUnlock />
                 <span>Unlock Credits</span>
-              </Toggle>
+              </Toggle> */}
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center space-y-2">
               <InfoAccordion />
@@ -196,29 +196,27 @@ const Calculator = () => {
                   </Card>
                 </Card>
               </div>
-              {result ? (
-                <Card>
-                  <CardContent className=" flex justify-center items-center align-middle flex-col  w-full pt-6">
-                    <div className="flex flex-col sm:flex-row space-x-3 justify-center items-center">
-                      <FcDiploma1 size={60} />
-                      <span className="text-xl md:text-2xl font-bold text-neutral-900">
-                        {result.classification}
-                      </span>
-                      <span className="text-xl md:text-2xl font-bold text-neutral-900">
-                        {result.division ? result.division : null}
-                      </span>
-                    </div>
-                    <div className="flex flex-row space-x-3 text-neutral-900">
-                      <span className="text-xl md:text-2xl font-bold">
-                        Grade:
-                      </span>
-                      <span className="text-xl md:text-2xl font-bold">
-                        {result.grade}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              ) : null}
+              <Card className={`${result ? "card-visible" : "card-hidden"}`}>
+                <CardContent className=" flex transition justify-center items-center align-middle flex-col  w-full pt-6">
+                  <div className="flex flex-col sm:flex-row space-x-3 justify-center items-center">
+                    <FcDiploma1 size={60} />
+                    <span className="text-xl md:text-2xl font-bold text-neutral-900">
+                      {result?.classification}
+                    </span>
+                    <span className="text-xl md:text-2xl font-bold text-neutral-900">
+                      {result?.division ? result.division : null}
+                    </span>
+                  </div>
+                  <div className="flex flex-row space-x-3 text-neutral-900">
+                    <span className="text-xl md:text-2xl font-bold">
+                      Final Mark:
+                    </span>
+                    <span className="text-xl md:text-2xl font-bold">
+                      {result?.grade}%
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
               <div className="flex justify-center w-full">
                 <Button
                   className="w-full h-16 text-lg"
