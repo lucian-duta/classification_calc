@@ -1,3 +1,8 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { FcDiploma1 } from "react-icons/fc";
+import { useState } from "react";
 import GradeField from "@/components/GradeField";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -10,10 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { formSchema, gradeDefaultValues } from "@/schemas/gradeSchma";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { FcDiploma1 } from "react-icons/fc";
 // import { FiUnlock } from "react-icons/fi";
 // import { Toggle } from "@/components/ui/toggle";
 import InfoAccordion from "@/components/InfoAcordion";
@@ -21,7 +22,6 @@ import {
   CalcResult,
   calculateClassification,
 } from "@/lib/calculateClassification";
-import { useState } from "react";
 
 const Calculator = () => {
   const [result, setResult] = useState<CalcResult | null>(null);
@@ -185,7 +185,7 @@ const Calculator = () => {
                             <FormItem className="col-span-1">
                               <FormControl>
                                 <Input
-                                  disabled={true}
+                                  disabled
                                   type="number"
                                   min="20"
                                   max="180"
@@ -232,13 +232,7 @@ const Calculator = () => {
                 </CardContent>
               </Card>
               <div className="flex justify-center w-full">
-                <Button
-                  className="w-full h-16 text-lg"
-                  type="submit"
-                  onClick={() => {
-                    console.log(form.getValues());
-                  }}
-                >
+                <Button className="w-full h-16 text-lg" type="submit">
                   What's my classification ?
                 </Button>
               </div>

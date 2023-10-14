@@ -1,5 +1,6 @@
-import { formSchema } from "@/schemas/gradeSchma";
+/* eslint-disable guard-for-in */
 import z from "zod";
+import { formSchema } from "@/schemas/gradeSchma";
 
 export type CalcResult = {
   classification: string;
@@ -14,6 +15,7 @@ export const calculateClassification = (
   const level5Grades: number[] = [];
   let level6Grades: number[] = [];
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const key in data) {
     const gradeKey = key as keyof typeof data;
 
@@ -27,8 +29,6 @@ export const calculateClassification = (
   // Sort the arrays in descending order
   level6Grades = level6Grades.sort((a, b) => b - a);
 
-  console.log("level5Grades", level5Grades);
-  console.log("level6Grades", level6Grades);
   // Calculate components
   const mainComponent =
     (level6Grades[0] * 20 +
@@ -43,8 +43,6 @@ export const calculateClassification = (
 
   secondaryComponentGrades = secondaryComponentGrades.sort((a, b) => b - a);
 
-  console.log("secondaryComponentGrades", secondaryComponentGrades);
-
   const secondaryComponent =
     (secondaryComponentGrades[0] * 20 +
       secondaryComponentGrades[1] * 20 +
@@ -56,31 +54,31 @@ export const calculateClassification = (
 
   finalGrade = Math.round(finalGrade);
 
-  console.log(mainComponent + secondaryComponent);
-
   if (finalGrade >= 70) {
     return {
       classification: "First Class Honours (1:1)",
       grade: finalGrade,
     };
-  } else if (finalGrade >= 60) {
+  }
+  if (finalGrade >= 60) {
     return {
       classification: "Second Class Honours,",
       grade: Math.round(finalGrade),
       division: "First Division (2:1)",
     };
-  } else if (finalGrade >= 50) {
+  }
+  if (finalGrade >= 50) {
     return {
       classification: "Second Class Honours,",
       grade: finalGrade,
       division: "Second Division (2:2)",
     };
-  } else if (finalGrade >= 40) {
+  }
+  if (finalGrade >= 40) {
     return {
       classification: "Third Class Honours",
       grade: finalGrade,
     };
-  } else {
-    return { classification: "FAILED", grade: Math.round(finalGrade) };
   }
+  return { classification: "FAILED", grade: Math.round(finalGrade) };
 };

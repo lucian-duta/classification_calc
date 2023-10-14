@@ -1,4 +1,6 @@
 import React from "react";
+import { Control } from "node_modules/react-hook-form/dist/types/form";
+import z from "zod";
 import {
   FormControl,
   FormField,
@@ -7,8 +9,6 @@ import {
   FormMessage,
 } from "./ui/form";
 import { Input } from "./ui/input";
-import { Control } from "node_modules/react-hook-form/dist/types/form";
-import z from "zod";
 import { formSchema } from "@/schemas/gradeSchma";
 
 type GradeFieldProps = {
@@ -83,7 +83,7 @@ const GradeField: React.FC<GradeFieldProps> = ({
                 max="180"
                 onChange={(e) => {
                   let value = parseInt(e.target.value, 10);
-                  if (value < 20 || isNaN(value)) value = 1;
+                  if (value < 20 || Number.isNaN(value)) value = 1;
                   if (value > 180) value = 180;
                   field.onChange(value);
                 }}
