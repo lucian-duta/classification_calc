@@ -23,7 +23,7 @@ A web-based tool to help students calculate their final classification based on 
 1. Clone the repository:
 
 ```bash
-git clone [your-repo-link]
+git clone https://github.com/lucian-duta/classification_calc.git
 ```
 
 2. Navigate to the project directory:
@@ -60,7 +60,7 @@ Visit `http://localhost:5173` in your browser.
 
 ## Contribution
 
-This project is open source, and contributions are always welcome! Whether you're looking to fix bugs, add features, or improve documentation, we appreciate all help. For a detailed contribution guide, please check `CONTRIBUTING.md`.
+This project is open source, and contributions are always welcome! Whether you're looking to fix bugs, add features, or improve documentation, we appreciate all help. For a detailed contribution guide, please check [CONTRIBUTING](CONTRIBUTING.md).
 
 ## License
 

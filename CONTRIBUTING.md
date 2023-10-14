@@ -4,7 +4,7 @@ First off, thank you for considering contributing to Classification Calculator! 
 
 ## Code of Conduct
 
-By participating in this project, you are expected to uphold our Code of Conduct. Please make sure to read the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file before contributing.
+By participating in this project, you are expected to uphold our Code of Conduct. Please make sure to read the [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) file before contributing.
 
 ## How Can I Contribute?
 
@@ -59,11 +59,6 @@ npm start
 
 ## Get in Touch
 
-If you have questions or need further clarifications regarding contributions, feel free to [create an issue](LINK_TO_ISSUES_PAGE) or contact the maintainer directly.
+If you have questions or need further clarifications regarding contributions, feel free to [create an issue](https://github.com/lucian-duta/classification_calc/issues) or contact the maintainer directly.
 
 Thank you for your interest and for helping make Classification Calculator better!
-
-```
-
-Make sure to replace `LINK_TO_ISSUES_PAGE` with the actual link to the issues page of your repository. If you decide to include a Code of Conduct (which is a great idea for an open-source project), you'll need to create a `CODE_OF_CONDUCT.md` file as well.
-```
