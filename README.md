@@ -1,27 +1,77 @@
-# React + TypeScript + Vite
+# Classification Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based tool to help students calculate their final classification based on the University of East London's classification scheme.
 
-Currently, two official plugins are available:
+![Main Pic](https://github.com/lucian-duta/classification_calc/blob/dev/public/metaImage.png?raw=true)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- User-friendly interface for inputting module grades and credits.
+- Instant calculation of the final classification.
+- Detailed breakdown of the classification scheme.
+- Open Source - contributions welcome!
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone [your-repo-link]
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+
+```bash
+cd classification-calculator
+```
+
+3. Install dependencies:
+
+```bash
+yarn install
+```
+
+or
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+yarn start
+```
+
+or
+
+```bash
+npm start
+```
+
+Visit `http://localhost:5173` in your browser.
+
+## Contribution
+
+This project is open source, and contributions are always welcome! Whether you're looking to fix bugs, add features, or improve documentation, we appreciate all help. For a detailed contribution guide, please check `CONTRIBUTING.md`.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- This calculator is based on the [University of East London's classification scheme](https://uel.ac.uk/sites/default/files/part-3---academic-regulations.pdf).
+- Thanks to all contributors who help improve this tool!
+
+## Connect With Me
+
+- [LinkedIn](https://www.linkedin.com/in/lucian-duta/)
+- [GitHub](https://github.com/lucian-duta)
