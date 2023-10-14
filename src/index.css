@@ -16,3 +16,17 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.card-hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* This will handle the visible state */
+.card-visible {
+  max-height: 1000px; /* This value can be adjusted depending on your needs. It should be larger than the actual expected height of the card. */
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
