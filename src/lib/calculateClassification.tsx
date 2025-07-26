@@ -48,7 +48,7 @@ export const calculateClassification = (
       secondaryComponentGrades[1] * 20 +
       secondaryComponentGrades[2] * 20 +
       secondaryComponentGrades[3] * 20) /
-    100;
+    80;
 
   let finalGrade = (mainComponent * 80 + secondaryComponent * 20) / 100;
 
