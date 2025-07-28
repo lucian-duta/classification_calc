@@ -76,7 +76,7 @@ const GradeField: React.FC<GradeFieldProps> = ({
             <FormLabel>Credits</FormLabel>
             <FormControl>
               <Input
-                disabled={!editCredit ?? true}
+                disabled={editCredit}
                 className="min-w-[55px] px-2"
                 type="number"
                 min="20"
