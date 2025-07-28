@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/lucian-duta/classification_calc/compare/v1.0.0...v1.0.1) (2025-07-28)
+
+
+### Bug Fixes
+
+* correct logic for editCredit prop in GradeField component ([29e27cb](https://github.com/lucian-duta/classification_calc/commit/29e27cb646afcb7c9014d113d583e018a6cc66f0))
+* fix calculation error ([ba4632a](https://github.com/lucian-duta/classification_calc/commit/ba4632a0fab970607a2a8e521521c77c3bc3fbf2))
+* **func:** :bug: fixed bug with nan value rule ([71137b1](https://github.com/lucian-duta/classification_calc/commit/71137b14411e6f89ced5e1f2583cfd215fc1211a))
+* **seo:** :mag: updated meta tags ([94eb85b](https://github.com/lucian-duta/classification_calc/commit/94eb85b7e4de18c3b0f8778d8aa47f3217739cac))
+
 ## 1.0.0 (2023-10-14)
 
 ### Features
